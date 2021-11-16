@@ -54,7 +54,7 @@ while(1):
                 x2, y2 = x1 + ancho, y1 + alto
                 dedos_reg = copia[y1:y2, x1:x2]
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
-                dedos_reg = cv2.resize(dedos_reg, (200,200), interpolation= cv2.INTER_CUBIC) #redimencion de fotos
+                dedos_reg = cv2.resize(dedos_reg, (200, 200), interpolation= cv2.INTER_CUBIC) #redimencion de fotos
                 cv2.inwrite(carpeta + "/Mano_{}.jpg".format(cont), dedos_reg)
                 cont = cont + 1
 
